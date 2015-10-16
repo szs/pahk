@@ -1,44 +1,109 @@
 @import "settings";
 @import "foundation";
 
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switches",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+@import url(https://fonts.googleapis.com/css?family=Signika:400,600,700,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
+
+// VARIABLES
+
+$main-turq: #3fb0ac; 
+$main-yellow: #fae596;
+$main-navy: #163f45;
+
+$white: #fff;
+
+$font-art: 'Signika', sans-serif;
+$font-header: 'Montserrat', sans-serif;;
+$font-body: 'Noticia Text', serif;;
+
+// GLOBAL
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
-   background-color : black;
+  background-image: url('../images/retina-dust.png');
+  color: $main-turq;
 }
+
+.font-art {
+	font-family: $font-art;
+}
+
+h1 {
+	text-transform: uppercase;
+	color: $main-turq;
+	font-family: $font-header;
+	font-size: 1.4rem;
+	text-align: center;
+	margin: 60px 20px;
+	position: relative;
+}
+
+h1.strike:before {
+   	content: "";
+    display: block;
+    border-top: solid 1px $main-turq;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+h1.strike span {
+  	background-image: url('../images/retina-dust.png');
+	padding: 0 60px;
+	position: relative;
+	z-index: 5;
+}
+
+// UI
+
+.top-bar {
+	height: 3.8rem;
+	border-top: 4px solid $main-turq;
+	background-color: $white;
+}
+
+.logo {
+	height: calc(3.8rem - 4px);
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+	height: 3.8rem;
+	padding: 0.45rem 0.9rem;
+	border-right: 2px solid $main-yellow;
+	background-color: $white;
+	color: $main-turq;
+}
+
+.top-bar-section ul li > a {
+	font-family: $font-art;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.top-bar-section ul li > a:hover {
+	background-color: red;
+}
+
+.icon-search {
+	width: 17px;
+	margin-top: -2px;
+}
+
+.page-title {
+	width: 100%;
+}
+
+
+
+
+
