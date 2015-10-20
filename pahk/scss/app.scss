@@ -548,9 +548,6 @@ footer {
 
 
 @media #{$small-up} { 
-	.support .explanatory-text{
-		min-height: 160px;
-	}
 	.support .explanatory-block-2 .explanatory-text {
 		min-height: 230px;
 		a.button.cta {
@@ -563,6 +560,9 @@ footer {
 	.explanatory-block-2 a.cta.inner-button {
 		display: block;
 		margin: 0 auto;
+	}
+	.support .explanatory-text{
+		min-height: 160px;
 	}
 }
 
