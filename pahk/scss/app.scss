@@ -12,8 +12,13 @@ $main-yellow: #fae596;
 $main-dark: #163f45;
 
 $white: #fff;
-$grey-light: #e6e6e6;
+$grey-light: #ebebeb;
 $grey-dark: #666666;
+
+// ALTERNATIVE COLOUR SCHEME 1:
+// $main-turq: #f81b31; 
+// $main-yellow: #f7c444;
+// $main-dark: #b51c21;
 
 $font-art: 'Signika', sans-serif;
 $font-header: 'Montserrat', sans-serif;;
@@ -184,18 +189,23 @@ span.letter-list {
 
 .top-bar {
 	height: 3.8rem;
-	border-top: 4px solid $main-turq;
+	// border-top: 4px solid $main-turq;
+	border-top-style: double;
 	background-color: $white;
+	border-bottom-style: double;
+	.name {
+		margin-top: -2px;
+	}
 }
 
 .logo {
-	height: calc(3.8rem - 4px);
+	height: calc(3.8rem - 2px);
 }
 
 .top-bar-section li:not(.has-form) a:not(.button) {
-	height: calc(3.8rem - 4px);
+	height: calc(3.8rem - 6px);
 	padding: 0.45rem 0.9rem;
-	border-right: 1px solid $main-yellow;
+	border-right: 1px solid $main-turq;
 	background-color: $white;
 	color: $main-turq;
 }
@@ -238,6 +248,7 @@ span.frame-line {
 	margin-bottom: 30px;
 	padding-bottom: 40px;
 	padding-top: 40px;
+	border-style: double;
 }
 
 .text-section {
@@ -260,6 +271,7 @@ span.frame-line {
 a.button.cta {
 	background-color: $main-yellow;
 	border-left: 7px solid $main-dark;
+	border-right: 7px solid $main-dark;
 	padding: 10px 80px;
 	display: block;
 	margin: 0 auto;
@@ -271,8 +283,10 @@ a.button.cta {
 	font-family: $font-header;
 	font-weight: bold;
 	font-size: 0.8rem;
+	border-radius: 15px;
 	&:hover {
 		background-color: $main-turq;
+		color: $white;
 	}
 }
 
@@ -425,6 +439,8 @@ footer {
   cursor: pointer;
   margin: 0 0 0.5rem;
   font-weight: bold;
+  border: 1px solid $main-turq;
+  border-radius: 15px;
 }
 
 .filter-button:hover {
@@ -436,7 +452,7 @@ footer {
 .filter-button.is-checked {
   background-color: $main-turq;
   color: $main-yellow;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 
@@ -468,7 +484,7 @@ footer {
 }
 
 .isotope {
-	border: 1px solid $main-yellow;
+	border: 1px solid $main-turq;
 	img {
 		width: 100%;
 	}
