@@ -14,6 +14,7 @@ $main-dark: #163f45;
 $white: #fff;
 $grey-light: #ebebeb;
 $grey-dark: #666666;
+$grey-text: #999999;
 
 // ALTERNATIVE COLOUR SCHEME 1:
 // $main-turq: #f81b31; 
@@ -23,6 +24,7 @@ $grey-dark: #666666;
 $font-art: 'Signika', sans-serif;
 $font-header: 'Montserrat', sans-serif;;
 $font-body: 'Noticia Text', serif;;
+
 
 // --------- GLOBAL
 
@@ -42,6 +44,13 @@ body {
   background-image: url('../images/bg-retina-dust.png');
   font-family: $font-body, sans-serif;
   color: $main-turq;
+}
+
+.full-width {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,6 +88,7 @@ h1.strike span {
 	z-index: 5;
 }
 
+
 h2 {
 	font-size: 1.25rem;
 	text-align: center;
@@ -102,6 +112,7 @@ h5 {
 h6 {
 	font-size: 0.75rem;
 	font-weight: 700;
+	color: $main-dark !important;
 }
 
 p {
@@ -152,6 +163,29 @@ h4.subheader-strike span {
 	z-index: 5;
 }
 
+h3.artist-name {
+	text-transform: uppercase;
+}
+
+.project-description {
+	h4 {
+		color: $main-dark;
+		margin-top: 35px;
+	}
+	p.project-description-text {
+		line-height: 1.5rem;
+		margin-top: 12px;
+	}
+}
+
+#project-detail {
+	span.frame-line {
+		margin-top: 0px;
+		margin-left: 0;
+		border-width: 1px;
+	}
+}
+
 ol.custom-counter {
 	counter-reset: number-counter;
 	list-style-type: none;
@@ -200,6 +234,7 @@ span.letter-list {
 
 .logo {
 	height: calc(3.8rem - 2px);
+	background-color: $main-turq;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button) {
@@ -214,10 +249,6 @@ span.letter-list {
 	font-family: $font-art;
 	font-weight: 700;
 	text-transform: uppercase;
-}
-
-.top-bar-section ul li > a:hover {
-	background-color: red;
 }
 
 .icon-search {
@@ -286,7 +317,9 @@ a.button.cta {
 	border-radius: 15px;
 	&:hover {
 		background-color: $main-turq;
-		color: $white;
+		transition: background-color 0.2s;
+  		-webkit-transition: background-color 0.2s;
+		// color: $white;
 	}
 }
 
@@ -295,6 +328,43 @@ a.cta.inner-button {
 	padding: 10px;
 	display: block;
 }
+
+#project-detail .project-action-bar {
+	margin-top: 60px; 
+}
+
+.ui-text-overlay {
+	color: white;
+	font-family: $font-header;
+	text-transform: uppercase;
+	margin-right: 20px;
+	font-size: 0.7rem;
+	font-weight: 700;
+}
+
+.ui-text {
+	color: $main-dark;
+	font-family: $font-header;
+	font-size: 0.8rem;
+	font-weight: bold;
+	float: right;
+	padding: 8px 15px;
+}
+
+.social-icons {
+	background-color: $main-yellow;
+	width: 36px;
+	float: right;
+	border-radius: 18px;
+	padding: 6px;
+	margin: 0 5px 30px;
+	&:hover {
+		background-color: $main-turq;
+		transition: background-color 0.3s;
+  		-webkit-transition: background-color 0.3s;
+	}
+}
+
 
 .block-icon {
 	max-height: 50px;
@@ -331,6 +401,104 @@ footer {
 
 // --------- PAGES
 
+.full-width .inner-page-banner {
+	border: none;
+}
+
+#project-detail {
+	.inner-page-banner {
+		height: 75vh;
+		background-image: url(../images/tier-1-img.jpg);
+		position: relative;
+		.project-controls {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	.project-controls {
+		margin-top: 50px;
+		float: right;
+		span.ui-text {
+			display: inline-block;
+			float: left;
+		}
+		img {
+			width: 40px;
+			background-color: $main-turq;
+			margin-left: 1px;
+			transition: background-color 0.2s ease-out 0.1s;
+			-webkit-transition: background-color 0.2s ease-out 0.1s;
+			&:hover {
+				background-color: $main-dark;
+				transition: background-color 0.2s;
+				-webkit-transition: background-color 0.2s;
+			}
+		}
+	}
+	.project-controls a:nth-child(3) img {
+		margin-left: 2px;
+	}
+}
+
+#project-detail .project-metadata {
+	margin-top: 15px; 
+	table tr.even, table tr.alt, table tr:nth-of-type(even){
+		background: none;
+	}
+	table {
+		background-color: transparent;
+		border: none;
+		tbody tr td.metadata-key {
+			padding: 5px 40px 5px 0;
+		}
+		tbody tr td.metadata-value {
+			padding: 5px 10px 5px 0;
+		}
+		td {
+			font-size: 0.7rem;
+			font-family: $font-header;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		td.metadata-key {
+			color: $main-dark;
+			border-bottom: 1px solid $main-turq;
+		}
+		td.metadata-value {
+			color: $main-turq;
+			border-bottom: 1px solid $main-turq;
+			width: 100%;
+		}
+	}
+	&.project-metadata-footer {
+		margin-top: 40px;
+	}
+}
+
+#project-detail .project-images-column {
+	margin-top: 60px;
+	.tier-2-image-column, .tier-3-image-column {
+		img {
+			border: 10px solid $white;
+		}
+	}
+	.tier-2-image {
+		background-color: $white;
+		p.image-caption {
+			font-family: $font-header;
+			color: $grey-text;
+			font-size: 0.8rem;
+			padding: 5px 10px 15px;
+		}
+	}
+}
+
+#project-detail .project-images-column.tier-3 {
+	margin-top: 10px;
+}
+
+
 .inner-page-banner {
 	border: 6px solid $main-turq;
 	height: 280px;
@@ -346,14 +514,14 @@ footer {
 	position: absolute;
 	bottom: 0;
 	text-align: center;
-	border-left: 4px solid $main-yellow;
+	border-top: 4px solid $main-yellow;
 	h5 {
 		color: $white;
 		font-weight: bold;
 		padding-bottom: 5px;
 	}
 	h6 {
-		color: $main-yellow;
+		color: $main-yellow !important;
 		font-weight: bold;
 		padding-bottom: 5px;
 	}
@@ -394,7 +562,7 @@ footer {
 	overflow: auto;
 }
 
-.support {
+#support {
 	a.button-single {
 		margin-bottom: 40px;
 	}
@@ -446,6 +614,8 @@ footer {
 .filter-button:hover {
   background-color: $main-yellow;
   color: $main-turq;
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
 }
 
 .filter-button:active,
@@ -564,7 +734,7 @@ footer {
 
 
 @media #{$small-up} { 
-	.support .explanatory-block-2 .explanatory-text {
+	#support .explanatory-block-2 .explanatory-text {
 		min-height: 230px;
 		a.button.cta {
 			max-width: 250px;
@@ -577,7 +747,7 @@ footer {
 		display: block;
 		margin: 0 auto;
 	}
-	.support .explanatory-text{
+	#support .explanatory-text{
 		min-height: 160px;
 	}
 }
@@ -621,26 +791,26 @@ footer {
 /* min-width 641px and max-width 774*/
 
 @media only screen and (min-width: 641px) and (max-width: 705px) { 
-	.support .explanatory-text{
+	#support .explanatory-text{
 		min-height: 270px;
 	}
 }
 
 @media only screen and (min-width: 705px) and (max-width: 774px) { 
-	.support .explanatory-text{
+	#support .explanatory-text{
 		min-height: 240px;
 	}
 } 
 
 
 @media only screen and (min-width: 775px) and (max-width: 949px) { 
-	.support .explanatory-text{
+	#support .explanatory-text{
 		min-height: 230px;
 	}
 } 
 
 @media only screen and (min-width: 1025px) and (max-width: 1139px) { 
-	.support .explanatory-text{
+	#support .explanatory-text{
 		min-height: 220px;
 	}
 } 
