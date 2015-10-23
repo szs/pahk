@@ -53,7 +53,7 @@
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <img class="logo" src="./images/logo-pahk-transparent.png">
+        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pahk-transparent.png">
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
@@ -66,7 +66,7 @@
         <li><a href="#">Projects</a></li>
         <li><a href="#">Join & Support</a></li>
         <li><a href="#">中文</a></li>
-        <li><a href="#"><img class="icon-search" src="./images/icon-search.png"></a></li>
+        <li><a href="#"><img class="icon-search" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-search.png"></a></li>
       </ul>
     </section>
   </nav>

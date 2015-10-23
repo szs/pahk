@@ -6,9 +6,6 @@ get_header(); ?>
 
 <?php get_template_part( 'parts/featured-image' ); ?>
 
-<div class="row">
-	<div class="small-12 large-12 columns" role="main">
-
 <div id="about">
   <div class="row page-title">
     <h1 class="strike"><span>ABOUT PAHK</span></h1>
@@ -118,9 +115,6 @@ get_header(); ?>
       <h4 class="text-center">Hong Kong Arts Center</h4>
     </div>
   </div>
-</div>
-
-	</div>
 </div>
 
 <?php get_footer(); ?>
