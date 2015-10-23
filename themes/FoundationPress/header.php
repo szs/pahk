@@ -22,6 +22,8 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-precomposed.png">
 
+		<link rel="stylesheet" href="css/app.css" />
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -42,7 +44,39 @@
 		endif;
 	?>
 
-	<?php get_template_part( 'parts/top-bar' ); ?>
+
+
+
+
+<!-- sherin's custom header bar -->
+<div class="fixed">
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pahk-transparent.png">
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a class="font-art" href="#">About</a></li>
+        <li><a href="#">For Corporates</a></li>
+        <li><a href="#">For Artists</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Join & Support</a></li>
+        <li><a href="#">中文</a></li>
+        <li><a href="#"><img class="icon-search" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-search.png"></a></li>
+      </ul>
+    </section>
+  </nav>
+</div>
+
+
+
+
+
+	<?php // get_template_part( 'parts/top-bar' ); ?>
 
 <section class="container" role="document">
 	<?php do_action( 'foundationpress_after_header' ); ?>

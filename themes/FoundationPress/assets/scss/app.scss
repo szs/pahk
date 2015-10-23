@@ -1,5 +1,5 @@
-@import "settings";
-@import "foundation";
+// @import "config/settings";
+// @import "foundation";
 
 @import url(https://fonts.googleapis.com/css?family=Signika:400,600,700,300);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
@@ -220,7 +220,6 @@ span.letter-list {
 
 
 // --------- UI
-
 .top-bar {
 	height: 3.8rem;
 	// border-top: 4px solid $main-turq;
