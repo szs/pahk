@@ -163,8 +163,44 @@ h4.subheader-strike span {
 	z-index: 5;
 }
 
+h4.subsection-header {
+	background-color: $main-turq;
+	color: $white;
+	margin: 0 auto;
+	display: inline-block;
+	padding: 2px 40px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
 h3.artist-name {
 	text-transform: uppercase;
+}
+
+.text-section p.primary-desc {
+	font-weight: bold;
+	font-size: 1rem;
+	text-align: center;
+	line-height: 1rem;
+	margin-bottom: 0.5rem;
+	margin-top: 20px;
+}
+
+.partner-info p.secondary-desc {
+	font-style: italic;
+	line-height: 1.25rem;
+	margin-bottom: 15px;
+}
+
+.partner-info p.secondary-desc:last-child {
+	margin-bottom: 40px;
+}
+
+span.text-pipe::before {
+	content: "|";
+	margin: 0 auto;
+	display: block;
+	text-align: center;
 }
 
 .project-description {
@@ -184,6 +220,12 @@ h3.artist-name {
 		margin-left: 0;
 		border-width: 1px;
 	}
+}
+
+.artwork-quote {
+	font-style: italic;
+	color: $white;
+	font-weight: 700;
 }
 
 ol.custom-counter {
@@ -217,6 +259,8 @@ span.letter-list {
 	font-size: 1.1rem;
 	padding-right: 7px;
 }
+
+
 
 
 // --------- UI
@@ -364,7 +408,6 @@ a.cta.inner-button {
   		-webkit-transition: background-color 0.3s;
 	}
 }
-
 
 .block-icon {
 	max-height: 50px;
@@ -532,12 +575,19 @@ footer {
 		color: $white;
 		font-size: 1.1rem;
 		padding-bottom: 0px;
+		letter-spacing: 1px;
 	}
 	h3.artwork-name {
 		color: white;
-		font-size: 1.3rem;
+		font-size: 1.6rem;
 		margin-bottom: 0;
 		color: $white;
+	}
+	h5.district-name {
+		letter-spacing: 2px;
+	}
+	h6.artwork-duration {
+		letter-spacing: 0.5px;
 	}
 }
 
@@ -585,7 +635,18 @@ footer {
 	}
 }
 
-
+#corporates {
+	.inner-page-banner {
+		background-image: url(../images/banner-inner-2.jpg);
+	}
+	h1 {
+		margin-bottom: 20px;
+	}
+	.inner-page-banner {
+		margin-top: 35px;
+		height: 350px;
+	}
+}
 
 // --------- ISOTOPE FILTER 
 
