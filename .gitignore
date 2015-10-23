@@ -1,0 +1,3 @@
+*.DS_Store
+*/themes/FoundationPress/assets/stylesheets/*
+*/themes/FoundationPress/node_modules/*
