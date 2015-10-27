@@ -163,14 +163,15 @@ h4.subheader-strike span {
 	z-index: 5;
 }
 
-h4.subsection-header {
+h4.blue-header {
 	background-color: $main-turq;
 	color: $white;
 	margin: 0 auto;
-	display: inline-block;
+	display: block;
 	padding: 2px 40px;
 	text-align: center;
 	margin-bottom: 40px;
+	max-width: 80%;
 }
 
 h3.artist-name {
@@ -183,13 +184,13 @@ h3.artist-name {
 	text-align: center;
 	line-height: 1rem;
 	margin-bottom: 0.5rem;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .partner-info p.secondary-desc {
 	font-style: italic;
 	line-height: 1.25rem;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 .partner-info p.secondary-desc:last-child {
@@ -411,6 +412,13 @@ a.cta.inner-button {
 
 .block-icon {
 	max-height: 50px;
+}
+
+.corporate-cta {
+	margin-top: 10px;
+	a.button.cta {
+		margin-bottom: 15px;
+	}
 }
 
 footer {
@@ -639,14 +647,38 @@ footer {
 	.inner-page-banner {
 		background-image: url(../images/banner-inner-2.jpg);
 	}
+	.card.row {
+		padding-bottom: 15px;
+		padding-top: 15px;
+	}
+	.text-section {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 	h1 {
 		margin-bottom: 20px;
+	}
+	h2 {
+		margin-top: 40px;
 	}
 	.inner-page-banner {
 		margin-top: 35px;
 		height: 350px;
 	}
 }
+
+.client-logos { 
+	img {
+		display: inline-block;
+		max-width: 160px;
+		margin: 0 auto;
+		padding: 10px;
+	}
+}
+
+.featured-project-vertical {
+}
+
 
 // --------- ISOTOPE FILTER 
 
