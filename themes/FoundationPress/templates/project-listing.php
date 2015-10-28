@@ -4,6 +4,8 @@ Template Name: Project Listing
 */
 get_header(); ?>
 
+CAROUSEL
+
 <div class="row page-title">
   <h1 class="strike"><span>Projects</span></h1>
 </div>

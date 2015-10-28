@@ -16,16 +16,17 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+  get_header();
 
-<div class="row">
-<!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+  if ( !empty($_GET['sorting']) ) {
+    $sorting = $_GET['sorting'];
+  } else { $sorting = null; }
 
-	<?php if ( !have_posts() ) { _e('Sorry, no results were found.'); } ?>
+  $params = array ('limit' => -1);
+  $pods = pods('projects', $params);
 
-HELLO TEST
-
+  $num_of_posts = 0;
+?>
 
 <div class="row page-title">
   <h1 class="strike"><span>Projects</span></h1>
@@ -33,99 +34,63 @@ HELLO TEST
 
 <div class="row">
   <h4>Filter projects by</h4>
-  <div id="filters" class="filter-button-group">  <button class="filter-button is-checked" data-filter="*">ALL</button>
-    <button class="filter-button" data-filter=".metal">LOCAL</button>
-    <button class="filter-button" data-filter=".transition">INTERNATIONAL</button>
-    <button class="filter-button" data-filter=".alkali, .alkaline-earth">INDOOR</button>
-    <button class="filter-button" data-filter=":not(.transition)">OUTDOOR</button>
-    <button class="filter-button" data-filter=".metal:not(.transition)">WALL-MOUNTED</button>
-    <button class="filter-button" data-filter="numberGreaterThan50">FREE-STANDING</button>
+  <div id="filters" class="filter-button-group">
+    <a href="#" class="filter-button is-checked" data-filter="*">ALL</a>
+    <a href="#" class="filter-button" data-filter=".metal">LOCAL</a>
+    <a href="#" class="filter-button" data-filter=".transition">INTERNATIONAL</a>
+    <a href="#" class="filter-button" data-filter=".alkali, .alkaline-earth">INDOOR</a>
+    <a href="#" class="filter-button" data-filter=":not(.transition)">OUTDOOR</a>
+    <a href="#" class="filter-button" data-filter=".metal:not(.transition)">WALL-MOUNTED</a>
+    <a href="#" class="filter-button" data-filter="numberGreaterThan50">FREE-STANDING</a>
   </div>
 </div>
+
+<?php if ( !have_posts() ) { _e('Sorry, no results were found.'); } ?>
 
 <div class="row">
-  <div class="isotope">
-    <div class="element-item transition metal " data-category="transition">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
-    <div class="element-item metalloid " data-category="metalloid">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
-    <div class="element-item post-transition metal " data-category="post-transition">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
-    <div class="element-item post-transition metal " data-category="post-transition">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
-    <div class="element-item transition metal " data-category="transition">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
-    <div class="element-item alkali metal " data-category="alkali">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
-    <div class="element-item alkali metal " data-category="alkali">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
-    <div class="element-item transition metal " data-category="transition">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
-    <div class="element-item alkaline-earth metal " data-category="alkaline-earth">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
-    <div class="element-item transition metal " data-category="transition">
-      <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb-art-1.png"></div>
-      <h5>Wan Chai</h5>
-      <h6>June 2015 - July 2015</h6>
-      <h3 class="artist-name">MTR CORPORATION:</h3>
-      <h3>Tiara Sculpture Competition</h3>
-    </div>
+<div class="isotope">
+<?php
+if ( $pods->total() ) {
+while ( $pods->fetch() ) {
+  if (has_post_thumbnail( $post->ID ) ) {
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) );
+    $image = $image[0];
+  }else{
+    $image = get_bloginfo('template_directory')."/assets/images/black.png";
+  } ?>
+
+  <div class="element-item <?php echo $class; ?>" data-category="transition">
+    <div><img src="<?php echo $image; ?>" /></div>
+    <?php the_title('<h5>', '</h5>'); ?>
+    <h6><?php echo $pods->display('display_from'); ?> - <?php echo $pods->display('display_until'); ?></h6>
+    <h3 class="artist-name"><?php echo $pods->display('artist_name'); ?></h3>
   </div>
+<?php }}
+
+  if ( $sorting === null ) {
+    // show all posts
+    $num_of_posts++;
+  } else {
+    $post_terms = wp_get_post_terms ($post->ID, 'projectcategory');
+    $current_post_custom_category = $post_terms[0]->slug;
+    if ( $current_post_custom_category === $sorting ) {
+      // show current matching post
+      $num_of_posts++;
+    }
+  }
+
+if ( $num_of_posts === 0 ) {
+  _e('Sorry, no results were found.');
+} ?>
+
+</div>
 </div>
 
-	<?php /* Display navigation to next/previous pages when applicable */ ?>
-	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-		</nav>
-	<?php } ?>
-
-	</div>
-</div>
+<?php /* Display navigation to next/previous pages when applicable */ ?>
+<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
+	<nav id="post-nav">
+		<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+		<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+	</nav>
+<?php } ?>
 <?php get_footer(); ?>
