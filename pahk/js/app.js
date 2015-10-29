@@ -1,13 +1,13 @@
 $(document).foundation();
 
-$(".element-item").append("<span class='frame-line'>_</span>");
+$(".grid-item").append("<span class='frame-line'>_</span>");
 
 // //---------- EXTERNAL JS: isotope.pkgd.js
 
 $( document ).ready( function() {
   // init Isotope
   var $container = $('.isotope').isotope({
-    itemSelector: '.element-item',
+    itemSelector: '.grid-item',
     layoutMode: 'fitRows',
     getSortData: {
       name: '.name',

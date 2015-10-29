@@ -766,15 +766,15 @@ footer {
 	margin-bottom: 10px;
 }
 
-.element-item img {
+.grid-item img {
 	margin-bottom: 20px;
 }
 
 
 
-/* ---- .element-item ---- */
+/* ---- .grid-item ---- */
 
-.element-item {
+.grid-item {
   position: relative;
   float: left;
   width: calc(50% - 20px);
@@ -785,14 +785,13 @@ footer {
   overflow: auto;
 }
 
-.element-item > * {
+.grid-item > * {
   margin: 0;
   padding: 0;
 }
 
-.element-item .name {
+.grid-item .name {
   position: absolute;
-
   left: 10px;
   top: 60px;
   text-transform: none;
@@ -801,7 +800,7 @@ footer {
   font-weight: normal;
 }
 
-.element-item .symbol {
+.grid-item .symbol {
   position: absolute;
   left: 10px;
   top: 0px;
@@ -810,13 +809,13 @@ footer {
   color: white;
 }
 
-.element-item .number {
+.grid-item .number {
   position: absolute;
   right: 8px;
   top: 5px;
 }
 
-.element-item .weight {
+.grid-item .weight {
   position: absolute;
   left: 10px;
   top: 76px;
@@ -843,6 +842,10 @@ footer {
 	#support .explanatory-text{
 		min-height: 160px;
 	}
+	.grid-item {
+	  width: calc(100% - 20px);
+	}
+
 }
 
 @media #{$medium-up} { 
@@ -863,7 +866,12 @@ footer {
 @media #{$large-up} {
 	.explanatory-block-2 a.cta.inner-button-3 {
 		margin-top: 48px;
-	} 
+	}
+
+	.grid-item {
+	  width: calc(33% - 20px);
+	}
+
 }
 
 @media #{$large-only} { 
